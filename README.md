@@ -1,4 +1,4 @@
-# TM_Project
+# TM_Instructor
 
 ## 安裝指南
 
