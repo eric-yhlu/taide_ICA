@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 30%;
+    background-color: #e9e9e9; /* 變更為灰色 */
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#conversationList {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.sidebar .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.sidebar button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1; /* 讓按鈕的寬度自動調整以填滿容器 */
+}
+
+.sidebar button:hover {
+    background-color: #45a049;
+}
+
+.chat-window {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #fff; /* 變更為白色 */
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 讓標題與按鈕之間自動留空 */
+    padding: 10px;
+    background-color: #4CAF50;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+}
+
+#conversationTitle {
+    color: white; /* 將文字設為白色 */
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.chat-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f1f1f1; /* 變更為白色 */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 浮水印樣式 */
+.watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://firebasestorage.googleapis.com/v0/b/tm-project-c29c8.appspot.com/o/%E6%A0%A1%E5%BE%BD%26TM.jpg?alt=media&token=8726b7c8-6d98-4ffc-a4fc-685e58f7c9f1') no-repeat center center; /* 浮水印圖片路徑 */
+    background-size: 65% 65%; 
+    opacity: 0.1; /* 調整浮水印透明度 */
+    pointer-events: none; /* 確保浮水印不會影響到使用者的點擊操作 */
+    z-index: 1; /* 確保浮水印在內容之上 */
+}
+
+.conversation-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #d1d1d1; /* 修改為灰色 */
+    cursor: pointer;
+}
+
+.conversation-item:hover {
+    background-color: #ccc;
+}
+
+.conversation-item .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.message {
+    padding: 10px;
+    background-color: #d1f1d3;
+    margin: 10px;
+    border-radius: 15px;
+    max-width: 70%;
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: #bdf5c4;
+}
+
+.message.bot {
+    align-self: flex-start;
+}
+
+.icon-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.icon-btn:hover {
+    color: #4CAF50;
+}
+.feedback-container {
+    display: inline-flex;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.like-btn, .dislike-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+

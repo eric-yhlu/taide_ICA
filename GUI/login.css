@@ -1,0 +1,102 @@
+/* 整體畫面樣式 */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 包裹圖片和登入框的容器 */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* 機器手臂圖片的樣式和動畫 */
+.robot-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    animation: moveLeftToCenter 1.5s ease forwards; /* 動畫從左移到中間 */
+    opacity: 0;
+}
+
+/* 登入框的樣式和動畫 */
+.login-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: moveRightToCenter 1.5s ease forwards; /* 動畫從右移到中間 */
+    opacity: 0;
+}
+
+/* 登入框內的標題樣式 */
+.login-container h2 {
+    background-color: #a5d6a7; /* 背景顏色保持 */
+    color: white;
+    padding: 5px 0;
+    margin: 0; /* 移除外部間距 */
+    width: 100%; /* 讓標題寬度填滿父容器 */
+    text-align: center; /* 保持文字置中 */
+    border: none; /* 移除邊框 */
+    border-radius: 0px; /* 如果不需要圓角，設為0 */
+    box-sizing: border-box; /* 確保內邊距不會影響總尺寸 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+
+/* 登入框內的登入按鈕樣式 */
+.login-container #loginBtn {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background-color: #66bb6a;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(102, 187, 106, 0.3);
+    margin-top: 30px;
+}
+
+.login-container #loginBtn:hover {
+    background-color: #57a05b;
+}
+
+/* 左邊圖片動畫效果：從中間稍微向左偏移100px開始移動到中間 */
+@keyframes moveLeftToCenter {
+    0% {
+        transform: translateX(-100px); /* 從中間向左偏移100px */
+        opacity: 0.5; /* 開始時半透明 */
+    }
+    100% {
+        transform: translateX(0); /* 最終位置在中間 */
+        opacity: 1;
+    }
+}
+
+/* 右邊登入框動畫效果：從中間稍微向右偏移100px開始移動到中間 */
+@keyframes moveRightToCenter {
+    0% {
+        transform: translateX(100px); /* 從中間向右偏移100px */
+        opacity: 0.5; /* 開始時半透明 */
+    }
+    100% {
+        transform: translateX(0); /* 最終位置在中間 */
+        opacity: 1;
+    }
+}

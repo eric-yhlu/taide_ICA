@@ -1,0 +1,4 @@
+建立伺服器:python -m http.server 8000
+
+
+在網頁中輸入:http://localhost:8000/GUI/login.html

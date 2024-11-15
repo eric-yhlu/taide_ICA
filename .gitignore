@@ -1,0 +1,21 @@
+# 環境設定檔案
+.env
+
+# Python 編譯檔案
+__pycache__/
+*.py[cod]
+
+# 虛擬環境
+venv/
+.env/
+
+# 日誌檔案
+*.log
+
+# 開發工具設定檔案
+.vscode/
+.idea/
+
+# 資料庫檔案
+*.sqlite3
+*.db

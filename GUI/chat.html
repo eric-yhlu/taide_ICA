@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天介面</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <div id="app-container" class="container">
+        <!-- 側邊欄，顯示每個子對話集 -->
+        <div class="sidebar">
+            <h2>Conversation Record</h2>
+            <div id="conversationList"></div>
+            
+            <!-- 包含兩個按鈕的容器 -->
+            <div class="button-container">
+                
+                <button id="switchUserBtn" class="switch-user-btn">Change User</button>
+                <button id="newConversationBtn">Add New Conversation</button>
+            </div>
+        </div>
+        
+        <!-- 聊天視窗 -->
+        <div class="chat-window">
+            <div class="watermark"></div> <!-- 新增浮水印元素 -->
+            <div class="chat-header">
+                <h2 id="conversationTitle">TM ROBOT Instructor</h2>
+            </div>
+            <div id="chat-content" class="chat-content"></div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="input message..." onkeydown="handleEnter(event)">
+            </div>
+        </div>
+    </div>
+
+    <script src="chat.js" type="module"></script>
+</body>
+</html>
