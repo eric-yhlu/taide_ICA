@@ -6,7 +6,6 @@
 首先，將專案從 GitHub 下載下來：
 ```bash
 git clone https://github.com/eric-yhlu/TM_Instructor.git
-cd TM_Project
 ```
 ```bash
 cd TM_Project
