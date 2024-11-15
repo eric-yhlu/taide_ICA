@@ -3,7 +3,7 @@
 ## 安裝指南
 
 ### 1. 下載專案
-首先，請將專案從 GitHub 下載至本地端：
+首先，將專案從 GitHub 下載下來：
 ```bash
 git clone https://github.com/eric-yhlu/TM_Instructor.git
 cd TM_Project
@@ -12,7 +12,7 @@ cd TM_Project
 cd TM_Project
 ```
 ### 2. 設置環境變數
-請在 programe/.env 文件中添加您的 OpenAI API 金鑰，格式如下：
+請在 programe/.env 文件中添加 OpenAI API 金鑰，格式如下：
 ```bash
 OPENAI_API_KEY=your_openai_api_key
 ```
