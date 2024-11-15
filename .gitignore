@@ -1,5 +1,5 @@
 # 環境設定檔案
-.env
+api.env
 
 # Python 編譯檔案
 __pycache__/
