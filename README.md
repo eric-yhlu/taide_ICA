@@ -8,6 +8,9 @@
 git clone https://github.com/eric-yhlu/TM_Instructor.git
 cd TM_Project
 ```
+```bash
+cd TM_Project
+```
 ### 2. 設置環境變數
 請在 programe/.env 文件中添加您的 OpenAI API 金鑰，格式如下：
 ```bash
